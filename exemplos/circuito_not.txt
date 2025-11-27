@@ -1,0 +1,22 @@
+// Circuito simples com porta NOT (inversor)
+circuito CircuitoNOT {
+    entrada A {
+        valor_inicial 1
+    }
+
+    porta_logica NOT inversor {
+        numero_de_entradas 1
+        numero_de_saidas 1
+        tabela_verdade {
+            0 -> 1
+            1 -> 0
+        }
+    }
+
+    saida S {
+    }
+
+    conexao conectar A.saida -> inversor.entrada0
+    conexao conectar inversor.saida -> S.entrada
+}
+

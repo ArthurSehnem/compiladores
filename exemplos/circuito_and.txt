@@ -1,0 +1,29 @@
+// Circuito simples com porta AND
+circuito CircuitoAND {
+    entrada A {
+        valor_inicial 1
+    }
+
+    entrada B {
+        valor_inicial 1
+    }
+
+    porta_logica AND porta_and {
+        numero_de_entradas 2
+        numero_de_saidas 1
+        tabela_verdade {
+            0 0 -> 0
+            0 1 -> 0
+            1 0 -> 0
+            1 1 -> 1
+        }
+    }
+
+    saida S {
+    }
+
+    conexao conectar A.saida -> porta_and.entrada0
+    conexao conectar B.saida -> porta_and.entrada1
+    conexao conectar porta_and.saida -> S.entrada
+}
+

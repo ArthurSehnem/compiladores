@@ -1,0 +1,27 @@
+circuito MeuCircuito {
+    entrada A {
+        valor_inicial 1
+    }
+
+    entrada B {
+        valor_inicial 0
+    }
+
+    porta_logica AND porta1 {
+        numero_de_entradas 2
+        numero_de_saidas 1
+        tabela_verdade {
+            0 0 -> 0
+            0 1 -> 0
+            1 0 -> 0
+            1 1 -> 1
+        }
+    }
+
+    saida resultado {
+    }
+
+    conexao conectar A.saida -> porta1.entrada0
+    conexao conectar B.saida -> porta1.entrada1
+    conexao conectar porta1.saida -> resultado.entrada
+}

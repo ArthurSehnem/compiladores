@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+
+# PLY cache
+parser.out
+parsetab.py
+
+# Arquivos gerados (manter exemplos)
+output/
+circuito_*.html
+resumo_*.txt
+
